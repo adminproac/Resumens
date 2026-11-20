@@ -1,0 +1,2190 @@
+{
+  "meta": {
+    "schemaVersion": "1.0.0",
+    "defaultLanguage": "es",
+    "supportedLanguages": [
+      "en",
+      "es"
+    ],
+    "lastUpdated": "2026-11-20T15:53:01.000Z"
+  },
+  "profile": {
+    "id": "profile-001",
+    "order": 1,
+    "createdAt": "2026-11-20T15:53:01.000Z",
+    "updatedAt": "2026-11-20T15:53:01.000Z",
+    "fullName": "JESUS EDGAR DUARTE",
+    "email": "j.edgar.duarte.c@gmail.com",
+    "phone": "470-461-3326"
+  },
+  "summary": [
+    {
+      "id": "sum-001",
+      "order": 1,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "text": {
+        "en": "Senior Software Engineer with more than 15 years of experience in software development using technologies such as Visual FoxPro, .NET (C#, VB.NET), JavaScript, Bootstrap, Node.js, React, Angular, MVC, WCF, and .NET Core 3.1/6/8. Strong background in SQL Server (T-SQL and Reporting Services). Experienced in backend development, frontend development, and multi-layer architectures.",
+        "es": "Ingeniero de Software Senior con más de 15 años de experiencia en desarrollo de software utilizando tecnologías como Visual FoxPro, .NET (C#, VB.NET), JavaScript, Bootstrap, Node.js, React, Angular, MVC, WCF y .NET Core 3.1/6/8. Sólida trayectoria en SQL Server (T-SQL y Reporting Services). Experiencia en desarrollo backend, desarrollo frontend y arquitecturas en múltiples capas."
+      }
+    },
+    {
+      "id": "sum-002",
+      "order": 2,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "text": {
+        "en": "I have solid experience in the healthcare industry, especially in authorizations, integrations with the Ministry of Health API, automatic request generation, Windows services, and migration of legacy systems. I also have strong knowledge of integral business systems including Billing, Inventory, Accounting, Payroll, Treasury, and Auditing processes.",
+        "es": "Tengo una sólida experiencia en el sector de la salud, especialmente en autorizaciones, integraciones con la API del Ministerio de Salud, generación automática de solicitudes, servicios de Windows y migración de sistemas heredados. También cuento con un amplio conocimiento de sistemas empresariales integrales, incluidos los procesos de Facturación, Inventario, Contabilidad, Nómina, Tesorería y Auditoría."
+      }
+    },
+    {
+      "id": "sum-003",
+      "order": 3,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "text": {
+        "en": "I enjoy teamwork, problem solving, and creating software that improves processes and supports business decisions.",
+        "es": "Disfruto el trabajo en equipo, la resolución de problemas y la creación de software que mejora los procesos y apoya las decisiones de negocio."
+      }
+    }
+  ],
+  "experience": [
+    {
+      "id": "exp-001",
+      "order": 1,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "company": {
+        "en": "EUREKA TECHNOLOGY SERVICES",
+        "es": "EUREKA TECHNOLOGY SERVICES"
+      },
+      "title": {
+        "en": "Senior Software Engineer",
+        "es": "Ingeniero de Software Senior"
+      },
+      "location": {
+        "en": "Bogotá, Colombia / Remote – Atlanta, USA",
+        "es": "Bogotá, Colombia / Remoto – Atlanta, EE. UU."
+      },
+      "startDate": "2022-08",
+      "endDate": "2024-08",
+      "isCurrent": false,
+      "dateLabel": null,
+      "highlights": [
+        {
+          "id": "exp-001-b01",
+          "order": 1,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Backend maintenance and new development in .NET Core (C#) and SQL Server.",
+            "es": "Mantenimiento backend y nuevo desarrollo en .NET Core (C#) y SQL Server."
+          }
+        },
+        {
+          "id": "exp-001-b02",
+          "order": 2,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Optimization and creation of stored procedures and functions (T-SQL).",
+            "es": "Optimización y creación de procedimientos almacenados y funciones (T-SQL)."
+          }
+        },
+        {
+          "id": "exp-001-b03",
+          "order": 3,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Development of reports using Reporting Services.",
+            "es": "Desarrollo de reportes utilizando Reporting Services."
+          }
+        },
+        {
+          "id": "exp-001-b04",
+          "order": 4,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Freelance senior developer supporting US-based projects remotely.",
+            "es": "Desarrollador senior independiente que apoya de forma remota proyectos con sede en Estados Unidos."
+          }
+        }
+      ]
+    },
+    {
+      "id": "exp-002",
+      "order": 2,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "company": {
+        "en": "HEON – Health Online S.A.",
+        "es": "HEON – Health Online S.A."
+      },
+      "title": {
+        "en": "Senior Development Analyst",
+        "es": "Analista de Desarrollo Senior"
+      },
+      "location": {
+        "en": "Bogotá, Colombia",
+        "es": "Bogotá, Colombia"
+      },
+      "startDate": "2014-08",
+      "endDate": "2022-03",
+      "isCurrent": false,
+      "dateLabel": null,
+      "highlights": [
+        {
+          "id": "exp-002-b01",
+          "order": 1,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Development of a Health Plans Management System for Ecopetrol using Visual Studio 2015, WCF, and SQL Server.",
+            "es": "Desarrollo de un Sistema de Gestión de Planes de Salud para Ecopetrol utilizando Visual Studio 2015, WCF y SQL Server."
+          }
+        },
+        {
+          "id": "exp-002-b02",
+          "order": 2,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Development of the \"Padres Cotizantes\" module for FiduPrevisora using VB.NET, WCF, and SQL Server.",
+            "es": "Desarrollo del módulo \"Padres Cotizantes\" para FiduPrevisora utilizando VB.NET, WCF y SQL Server."
+          }
+        },
+        {
+          "id": "exp-002-b03",
+          "order": 3,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Support and development for Affiliation and Certifications modules for Cafesalud and Cruz Blanca.",
+            "es": "Soporte y desarrollo de los módulos de Afiliación y Certificaciones para Cafesalud y Cruz Blanca."
+          }
+        },
+        {
+          "id": "exp-002-b04",
+          "order": 4,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Complete development and implementation of the MIPRES process for Medimás: Windows services, automatic request generation, authorizations (POS and No POS), reporting to the Ministry, supply management, and Reporting Services.",
+            "es": "Desarrollo e implementación completa del proceso MIPRES para Medimás: servicios de Windows, generación automática de solicitudes, autorizaciones (POS y No POS), reporte al Ministerio, gestión de suministros y Reporting Services."
+          }
+        },
+        {
+          "id": "exp-002-b05",
+          "order": 5,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Participation in the migration of legacy modules from ASP.NET 2003 to MVC with Razor, Angular, JavaScript, and SQL Server.",
+            "es": "Participación en la migración de módulos heredados de ASP.NET 2003 a MVC con Razor, Angular, JavaScript y SQL Server."
+          }
+        }
+      ]
+    },
+    {
+      "id": "exp-003",
+      "order": 3,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "company": {
+        "en": "MARITRANS S.A.",
+        "es": "MARITRANS S.A."
+      },
+      "title": {
+        "en": "Systems Analyst / Developer",
+        "es": "Analista de Sistemas / Desarrollador"
+      },
+      "location": {
+        "en": "Bogotá, Colombia",
+        "es": "Bogotá, Colombia"
+      },
+      "startDate": "2009-04",
+      "endDate": "2014-03",
+      "isCurrent": false,
+      "dateLabel": null,
+      "highlights": [
+        {
+          "id": "exp-003-b01",
+          "order": 1,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Development and support of an integral logistics and billing system using Visual FoxPro, SQL Server, C#, and Reporting Services.",
+            "es": "Desarrollo y soporte de un sistema integral de logística y facturación utilizando Visual FoxPro, SQL Server, C# y Reporting Services."
+          }
+        },
+        {
+          "id": "exp-003-b02",
+          "order": 2,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "System modules included Billing, Demurrage, Container Logistics, Accounting, Fixed Assets, Accounts Payable/Receivable, and Documentation.",
+            "es": "Los módulos del sistema incluían Facturación, Demurrage, Logística de Contenedores, Contabilidad, Activos Fijos, Cuentas por Pagar/Cobrar y Documentación."
+          }
+        },
+        {
+          "id": "exp-003-b03",
+          "order": 3,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Designed and developed a dynamic interface to migrate modules from Visual FoxPro to .NET (C#) using multi-layer architecture.",
+            "es": "Diseñé y desarrollé una interfaz dinámica para migrar módulos de Visual FoxPro a .NET (C#) utilizando una arquitectura en múltiples capas."
+          }
+        }
+      ]
+    },
+    {
+      "id": "exp-004",
+      "order": 4,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "company": {
+        "en": "AGS Colombia",
+        "es": "AGS Colombia"
+      },
+      "title": {
+        "en": "Specialized Systems Engineer",
+        "es": "Ingeniero de Sistemas Especializado"
+      },
+      "location": {
+        "en": "Bogotá, Colombia",
+        "es": "Bogotá, Colombia"
+      },
+      "startDate": "2006-03",
+      "endDate": "2009-03",
+      "isCurrent": false,
+      "dateLabel": null,
+      "highlights": [
+        {
+          "id": "exp-004-b01",
+          "order": 1,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Implementation and national deployment of the Mobile Medical Auditing System using Palm devices and Visual FoxPro/SQL Server.",
+            "es": "Implementación y despliegue nacional del Sistema Móvil de Auditoría Médica utilizando dispositivos Palm y Visual FoxPro/SQL Server."
+          }
+        },
+        {
+          "id": "exp-004-b02",
+          "order": 2,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Development, support, and reporting for medical accounts auditing systems for clients in Colombia and Ecuador.",
+            "es": "Desarrollo, soporte y reportes para sistemas de auditoría de cuentas médicas para clientes en Colombia y Ecuador."
+          }
+        },
+        {
+          "id": "exp-004-b03",
+          "order": 3,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Development of on-site auditing applications using VB.NET, SQL Server, and Crystal Reports.",
+            "es": "Desarrollo de aplicaciones de auditoría en sitio utilizando VB.NET, SQL Server y Crystal Reports."
+          }
+        },
+        {
+          "id": "exp-004-b04",
+          "order": 4,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Technical support for more than 40 medical auditors.",
+            "es": "Soporte técnico para más de 40 auditores médicos."
+          }
+        }
+      ]
+    },
+    {
+      "id": "exp-005",
+      "order": 5,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "company": {
+        "en": "ISOLTEC LTDA",
+        "es": "ISOLTEC LTDA"
+      },
+      "title": {
+        "en": "Software Development Engineer",
+        "es": "Ingeniero de Desarrollo de Software"
+      },
+      "location": {
+        "en": "Bogotá, Colombia",
+        "es": "Bogotá, Colombia"
+      },
+      "startDate": "2004-08",
+      "endDate": "2006-01",
+      "isCurrent": false,
+      "dateLabel": null,
+      "highlights": [
+        {
+          "id": "exp-005-b01",
+          "order": 1,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Analysis, design, and development of Payroll, Inventory, and Accounting modules using VB.NET, Crystal Reports, and Firebird.",
+            "es": "Análisis, diseño y desarrollo de los módulos de Nómina, Inventario y Contabilidad utilizando VB.NET, Crystal Reports y Firebird."
+          }
+        },
+        {
+          "id": "exp-005-b02",
+          "order": 2,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Development of mobile applications for water consumption readings using Windows Mobile (C#).",
+            "es": "Desarrollo de aplicaciones móviles para lecturas de consumo de agua utilizando Windows Mobile (C#)."
+          }
+        },
+        {
+          "id": "exp-005-b03",
+          "order": 3,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Training and technical support for engineers working on ERP modules.",
+            "es": "Capacitación y soporte técnico para ingenieros que trabajan en módulos de ERP."
+          }
+        }
+      ]
+    }
+  ],
+  "otherExperience": [
+    {
+      "id": "oexp-001",
+      "order": 1,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "company": {
+        "en": "Desktop System Ltda – Ecopetrol",
+        "es": "Desktop System Ltda – Ecopetrol"
+      },
+      "title": null,
+      "location": null,
+      "startDate": null,
+      "endDate": null,
+      "isCurrent": false,
+      "dateLabel": {
+        "en": "2004 and 2002",
+        "es": "2004 y 2002"
+      },
+      "highlights": [
+        {
+          "id": "oexp-001-b01",
+          "order": 1,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Development and modernization of budget and materials management software using Visual FoxPro.",
+            "es": "Desarrollo y modernización de software de gestión de presupuestos y materiales utilizando Visual FoxPro."
+          }
+        },
+        {
+          "id": "oexp-001-b02",
+          "order": 2,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "System documentation, training, and implementation.",
+            "es": "Documentación, capacitación e implementación del sistema."
+          }
+        }
+      ]
+    },
+    {
+      "id": "oexp-002",
+      "order": 2,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "company": {
+        "en": "Editorial El Globo – La República",
+        "es": "Editorial El Globo – La República"
+      },
+      "title": null,
+      "location": null,
+      "startDate": null,
+      "endDate": null,
+      "isCurrent": false,
+      "dateLabel": {
+        "en": "2003",
+        "es": "2003"
+      },
+      "highlights": [
+        {
+          "id": "oexp-002-b01",
+          "order": 1,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Software re-engineering, analysis, documentation, and maintenance in Visual FoxPro and SQL Server.",
+            "es": "Reingeniería de software, análisis, documentación y mantenimiento en Visual FoxPro y SQL Server."
+          }
+        }
+      ]
+    },
+    {
+      "id": "oexp-003",
+      "order": 3,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "company": {
+        "en": "Fraco S.A.",
+        "es": "Fraco S.A."
+      },
+      "title": null,
+      "location": null,
+      "startDate": null,
+      "endDate": null,
+      "isCurrent": false,
+      "dateLabel": {
+        "en": "2001",
+        "es": "2001"
+      },
+      "highlights": [
+        {
+          "id": "oexp-003-b01",
+          "order": 1,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "text": {
+            "en": "Migration of systems from FoxBase to Visual FoxPro and development of ISO 9002 modules.",
+            "es": "Migración de sistemas de FoxBase a Visual FoxPro y desarrollo de módulos ISO 9002."
+          }
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-001",
+      "order": 1,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "institution": {
+        "en": "Autonoma de Colombia University",
+        "es": "Universidad Autónoma de Colombia"
+      },
+      "credential": {
+        "en": "Systems Engineer / Computer Science",
+        "es": "Ingeniero de Sistemas / Ciencias de la Computación"
+      },
+      "location": null,
+      "startDate": null,
+      "endDate": null,
+      "isCurrent": false,
+      "dateLabel": null
+    },
+    {
+      "id": "edu-002",
+      "order": 2,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "institution": {
+        "en": "Fundación de Egresados Francisco José de Caldas",
+        "es": "Fundación de Egresados Francisco José de Caldas"
+      },
+      "credential": {
+        "en": "Diploma in Oracle 10g Database Administration (PL/SQL, Forms, Reports)",
+        "es": "Diplomado en Administración de Bases de Datos Oracle 10g (PL/SQL, Forms, Reports)"
+      },
+      "location": null,
+      "startDate": null,
+      "endDate": null,
+      "isCurrent": false,
+      "dateLabel": null
+    },
+    {
+      "id": "edu-003",
+      "order": 3,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "institution": {
+        "en": "Centro Colombo Americano",
+        "es": "Centro Colombo Americano"
+      },
+      "credential": {
+        "en": "English Course",
+        "es": "Curso de inglés"
+      },
+      "location": {
+        "en": "Bogotá, Colombia",
+        "es": "Bogotá, Colombia"
+      },
+      "startDate": null,
+      "endDate": null,
+      "isCurrent": false,
+      "dateLabel": null
+    },
+    {
+      "id": "edu-004",
+      "order": 4,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "institution": {
+        "en": "Gwinnett Technical College",
+        "es": "Gwinnett Technical College"
+      },
+      "credential": {
+        "en": "English Course",
+        "es": "Curso de inglés"
+      },
+      "location": {
+        "en": "Atlanta, Georgia",
+        "es": "Atlanta, Georgia"
+      },
+      "startDate": null,
+      "endDate": null,
+      "isCurrent": false,
+      "dateLabel": null
+    }
+  ],
+  "skills": [
+    {
+      "id": "skill-group-001",
+      "order": 1,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "category": {
+        "en": "Databases",
+        "es": "Bases de datos"
+      },
+      "items": [
+        {
+          "id": "skill-001",
+          "order": 1,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "name": {
+            "en": "SQL Server 2000–2022",
+            "es": "SQL Server 2000–2022"
+          }
+        },
+        {
+          "id": "skill-002",
+          "order": 2,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "name": {
+            "en": "Firebird",
+            "es": "Firebird"
+          }
+        },
+        {
+          "id": "skill-003",
+          "order": 3,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "name": {
+            "en": "PostgreSQL",
+            "es": "PostgreSQL"
+          }
+        }
+      ]
+    },
+    {
+      "id": "skill-group-002",
+      "order": 2,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "category": {
+        "en": "Backend",
+        "es": "Backend"
+      },
+      "items": [
+        {
+          "id": "skill-004",
+          "order": 1,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "name": {
+            "en": ".NET (C#, VB.NET)",
+            "es": ".NET (C#, VB.NET)"
+          }
+        },
+        {
+          "id": "skill-005",
+          "order": 2,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "name": {
+            "en": "WCF",
+            "es": "WCF"
+          }
+        },
+        {
+          "id": "skill-006",
+          "order": 3,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "name": {
+            "en": "Web Services",
+            "es": "Web Services"
+          }
+        },
+        {
+          "id": "skill-007",
+          "order": 4,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "name": {
+            "en": "MVC",
+            "es": "MVC"
+          }
+        },
+        {
+          "id": "skill-008",
+          "order": 5,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "name": {
+            "en": "Node.js",
+            "es": "Node.js"
+          }
+        },
+        {
+          "id": "skill-009",
+          "order": 6,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "name": {
+            "en": ".NET Core 3.1/6/8",
+            "es": ".NET Core 3.1/6/8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "skill-group-003",
+      "order": 3,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "category": {
+        "en": "Frontend",
+        "es": "Frontend"
+      },
+      "items": [
+        {
+          "id": "skill-010",
+          "order": 1,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "name": {
+            "en": "Angular (NgRx)",
+            "es": "Angular (NgRx)"
+          }
+        },
+        {
+          "id": "skill-011",
+          "order": 2,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "name": {
+            "en": "React (Redux)",
+            "es": "React (Redux)"
+          }
+        },
+        {
+          "id": "skill-012",
+          "order": 3,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "name": {
+            "en": "JavaScript",
+            "es": "JavaScript"
+          }
+        },
+        {
+          "id": "skill-013",
+          "order": 4,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "name": {
+            "en": "TypeScript",
+            "es": "TypeScript"
+          }
+        },
+        {
+          "id": "skill-014",
+          "order": 5,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "name": {
+            "en": "Bootstrap",
+            "es": "Bootstrap"
+          }
+        }
+      ]
+    },
+    {
+      "id": "skill-group-004",
+      "order": 4,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "category": {
+        "en": "Tools & Other",
+        "es": "Herramientas y otros"
+      },
+      "items": [
+        {
+          "id": "skill-015",
+          "order": 1,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "name": {
+            "en": "GitHub",
+            "es": "GitHub"
+          }
+        },
+        {
+          "id": "skill-016",
+          "order": 2,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "name": {
+            "en": "Docker",
+            "es": "Docker"
+          }
+        },
+        {
+          "id": "skill-017",
+          "order": 3,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "name": {
+            "en": "Docker Compose",
+            "es": "Docker Compose"
+          }
+        },
+        {
+          "id": "skill-018",
+          "order": 4,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "name": {
+            "en": "Crystal Reports",
+            "es": "Crystal Reports"
+          }
+        },
+        {
+          "id": "skill-019",
+          "order": 5,
+          "createdAt": "2026-11-20T15:53:01.000Z",
+          "updatedAt": "2026-11-20T15:53:01.000Z",
+          "name": {
+            "en": "Reporting Services",
+            "es": "Reporting Services"
+          }
+        }
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "id": "lang-001",
+      "order": 1,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "name": {
+        "en": "English",
+        "es": "Inglés"
+      },
+      "level": {
+        "en": "B1",
+        "es": "B1"
+      }
+    },
+    {
+      "id": "lang-002",
+      "order": 2,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "name": {
+        "en": "Spanish",
+        "es": "Español"
+      },
+      "level": null
+    }
+  ],
+  "additionalInfo": [
+    {
+      "id": "info-001",
+      "order": 1,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "text": {
+        "en": "Authorized to work in the U.S.",
+        "es": "Autorizado para trabajar en EE. UU."
+      }
+    },
+    {
+      "id": "info-002",
+      "order": 2,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "text": {
+        "en": "Driver's license with Real ID",
+        "es": "Licencia de conducir con Real ID"
+      }
+    },
+    {
+      "id": "info-003",
+      "order": 3,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "text": {
+        "en": "Available for full-time and overtime",
+        "es": "Disponible para jornada completa y horas extras"
+      }
+    },
+    {
+      "id": "info-004",
+      "order": 4,
+      "createdAt": "2026-11-20T15:53:01.000Z",
+      "updatedAt": "2026-11-20T15:53:01.000Z",
+      "text": {
+        "en": "Flexible schedule",
+        "es": "Horario flexible"
+      }
+    }
+  ],
+  "schema": {
+    "profile": {
+      "key": "profile",
+      "isArray": false,
+      "allowCreate": false,
+      "allowDelete": false,
+      "allowUpdate": true,
+      "label": {
+        "en": "Profile",
+        "es": "Perfil"
+      },
+      "fields": [
+        {
+          "key": "id",
+          "type": "string",
+          "required": true,
+          "maxLength": 64,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "ID",
+            "es": "ID"
+          },
+          "pattern": "^[a-z0-9-]+$"
+        },
+        {
+          "key": "order",
+          "type": "integer",
+          "required": true,
+          "maxLength": null,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "number",
+          "label": {
+            "en": "Order",
+            "es": "Orden"
+          },
+          "default": 0
+        },
+        {
+          "key": "createdAt",
+          "type": "datetime",
+          "required": true,
+          "maxLength": 40,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "Created at",
+            "es": "Fecha de creación"
+          }
+        },
+        {
+          "key": "updatedAt",
+          "type": "datetime",
+          "required": true,
+          "maxLength": 40,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "Updated at",
+            "es": "Fecha de actualización"
+          }
+        },
+        {
+          "key": "fullName",
+          "type": "string",
+          "required": true,
+          "maxLength": 120,
+          "localized": false,
+          "nullable": false,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "Full name",
+            "es": "Nombre completo"
+          }
+        },
+        {
+          "key": "email",
+          "type": "email",
+          "required": true,
+          "maxLength": 254,
+          "localized": false,
+          "nullable": false,
+          "system": false,
+          "ui": "email",
+          "label": {
+            "en": "Email",
+            "es": "Correo electrónico"
+          }
+        },
+        {
+          "key": "phone",
+          "type": "phone",
+          "required": true,
+          "maxLength": 30,
+          "localized": false,
+          "nullable": false,
+          "system": false,
+          "ui": "tel",
+          "label": {
+            "en": "Phone",
+            "es": "Teléfono"
+          }
+        }
+      ]
+    },
+    "summary": {
+      "key": "summary",
+      "isArray": true,
+      "allowCreate": true,
+      "allowDelete": true,
+      "allowUpdate": true,
+      "label": {
+        "en": "Professional summary",
+        "es": "Resumen profesional"
+      },
+      "fields": [
+        {
+          "key": "id",
+          "type": "string",
+          "required": true,
+          "maxLength": 64,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "ID",
+            "es": "ID"
+          },
+          "pattern": "^[a-z0-9-]+$"
+        },
+        {
+          "key": "order",
+          "type": "integer",
+          "required": true,
+          "maxLength": null,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "number",
+          "label": {
+            "en": "Order",
+            "es": "Orden"
+          },
+          "default": 0
+        },
+        {
+          "key": "createdAt",
+          "type": "datetime",
+          "required": true,
+          "maxLength": 40,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "Created at",
+            "es": "Fecha de creación"
+          }
+        },
+        {
+          "key": "updatedAt",
+          "type": "datetime",
+          "required": true,
+          "maxLength": 40,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "Updated at",
+            "es": "Fecha de actualización"
+          }
+        },
+        {
+          "key": "text",
+          "type": "localizedText",
+          "required": true,
+          "maxLength": 1200,
+          "localized": true,
+          "nullable": false,
+          "system": false,
+          "ui": "textarea",
+          "label": {
+            "en": "Summary text",
+            "es": "Texto del resumen"
+          }
+        }
+      ]
+    },
+    "experience": {
+      "key": "experience",
+      "isArray": true,
+      "allowCreate": true,
+      "allowDelete": true,
+      "allowUpdate": true,
+      "label": {
+        "en": "Professional experience",
+        "es": "Experiencia profesional"
+      },
+      "fields": [
+        {
+          "key": "id",
+          "type": "string",
+          "required": true,
+          "maxLength": 64,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "ID",
+            "es": "ID"
+          },
+          "pattern": "^[a-z0-9-]+$"
+        },
+        {
+          "key": "order",
+          "type": "integer",
+          "required": true,
+          "maxLength": null,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "number",
+          "label": {
+            "en": "Order",
+            "es": "Orden"
+          },
+          "default": 0
+        },
+        {
+          "key": "createdAt",
+          "type": "datetime",
+          "required": true,
+          "maxLength": 40,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "Created at",
+            "es": "Fecha de creación"
+          }
+        },
+        {
+          "key": "updatedAt",
+          "type": "datetime",
+          "required": true,
+          "maxLength": 40,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "Updated at",
+            "es": "Fecha de actualización"
+          }
+        },
+        {
+          "key": "company",
+          "type": "localizedString",
+          "required": true,
+          "maxLength": 150,
+          "localized": true,
+          "nullable": false,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "Company",
+            "es": "Empresa"
+          }
+        },
+        {
+          "key": "title",
+          "type": "localizedString",
+          "required": false,
+          "maxLength": 150,
+          "localized": true,
+          "nullable": true,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "Job title",
+            "es": "Cargo"
+          }
+        },
+        {
+          "key": "location",
+          "type": "localizedString",
+          "required": false,
+          "maxLength": 150,
+          "localized": true,
+          "nullable": true,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "Location",
+            "es": "Ubicación"
+          }
+        },
+        {
+          "key": "startDate",
+          "type": "dateMonth",
+          "required": false,
+          "maxLength": 7,
+          "localized": false,
+          "nullable": true,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "Start date",
+            "es": "Fecha de inicio"
+          },
+          "pattern": "^\\d{4}-\\d{2}$",
+          "note": {
+            "en": "Use YYYY-MM. Leave null when the month is unknown; put a display value in dateLabel instead (for example year-only dates).",
+            "es": "Use YYYY-MM. Déjelo vacío cuando se desconozca el mes; use dateLabel para el valor visible (por ejemplo, solo el año)."
+          }
+        },
+        {
+          "key": "endDate",
+          "type": "dateMonth",
+          "required": false,
+          "maxLength": 7,
+          "localized": false,
+          "nullable": true,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "End date",
+            "es": "Fecha de finalización"
+          },
+          "pattern": "^\\d{4}-\\d{2}$",
+          "note": {
+            "en": "Leave null when isCurrent is true, or when the end month is unknown.",
+            "es": "Déjelo vacío cuando isCurrent sea verdadero, o cuando se desconozca el mes de finalización."
+          }
+        },
+        {
+          "key": "isCurrent",
+          "type": "boolean",
+          "required": true,
+          "maxLength": null,
+          "localized": false,
+          "nullable": false,
+          "system": false,
+          "ui": "checkbox",
+          "label": {
+            "en": "Current role",
+            "es": "Cargo actual"
+          },
+          "default": false
+        },
+        {
+          "key": "dateLabel",
+          "type": "localizedString",
+          "required": false,
+          "maxLength": 40,
+          "localized": true,
+          "nullable": true,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "Date label",
+            "es": "Etiqueta de fecha"
+          },
+          "note": {
+            "en": "Optional display text when only years are known (for example “2004 and 2002”). Prefer startDate and endDate when the month is known.",
+            "es": "Texto opcional cuando solo se conocen los años (por ejemplo, “2004 y 2002”). Prefiera startDate y endDate cuando se conozca el mes."
+          }
+        },
+        {
+          "key": "highlights",
+          "type": "array",
+          "required": false,
+          "maxLength": null,
+          "localized": false,
+          "nullable": false,
+          "system": false,
+          "ui": "collection",
+          "label": {
+            "en": "Highlights",
+            "es": "Logros"
+          },
+          "itemFields": [
+            {
+              "key": "id",
+              "type": "string",
+              "required": true,
+              "maxLength": 64,
+              "localized": false,
+              "nullable": false,
+              "system": true,
+              "ui": "hidden",
+              "label": {
+                "en": "ID",
+                "es": "ID"
+              },
+              "pattern": "^[a-z0-9-]+$"
+            },
+            {
+              "key": "order",
+              "type": "integer",
+              "required": true,
+              "maxLength": null,
+              "localized": false,
+              "nullable": false,
+              "system": true,
+              "ui": "number",
+              "label": {
+                "en": "Order",
+                "es": "Orden"
+              },
+              "default": 0
+            },
+            {
+              "key": "createdAt",
+              "type": "datetime",
+              "required": true,
+              "maxLength": 40,
+              "localized": false,
+              "nullable": false,
+              "system": true,
+              "ui": "hidden",
+              "label": {
+                "en": "Created at",
+                "es": "Fecha de creación"
+              }
+            },
+            {
+              "key": "updatedAt",
+              "type": "datetime",
+              "required": true,
+              "maxLength": 40,
+              "localized": false,
+              "nullable": false,
+              "system": true,
+              "ui": "hidden",
+              "label": {
+                "en": "Updated at",
+                "es": "Fecha de actualización"
+              }
+            },
+            {
+              "key": "text",
+              "type": "localizedText",
+              "required": true,
+              "maxLength": 600,
+              "localized": true,
+              "nullable": false,
+              "system": false,
+              "ui": "textarea",
+              "label": {
+                "en": "Bullet point",
+                "es": "Viñeta"
+              }
+            }
+          ],
+          "default": []
+        }
+      ]
+    },
+    "otherExperience": {
+      "key": "otherExperience",
+      "isArray": true,
+      "allowCreate": true,
+      "allowDelete": true,
+      "allowUpdate": true,
+      "label": {
+        "en": "Other professional experience",
+        "es": "Otra experiencia profesional"
+      },
+      "fields": [
+        {
+          "key": "id",
+          "type": "string",
+          "required": true,
+          "maxLength": 64,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "ID",
+            "es": "ID"
+          },
+          "pattern": "^[a-z0-9-]+$"
+        },
+        {
+          "key": "order",
+          "type": "integer",
+          "required": true,
+          "maxLength": null,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "number",
+          "label": {
+            "en": "Order",
+            "es": "Orden"
+          },
+          "default": 0
+        },
+        {
+          "key": "createdAt",
+          "type": "datetime",
+          "required": true,
+          "maxLength": 40,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "Created at",
+            "es": "Fecha de creación"
+          }
+        },
+        {
+          "key": "updatedAt",
+          "type": "datetime",
+          "required": true,
+          "maxLength": 40,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "Updated at",
+            "es": "Fecha de actualización"
+          }
+        },
+        {
+          "key": "company",
+          "type": "localizedString",
+          "required": true,
+          "maxLength": 150,
+          "localized": true,
+          "nullable": false,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "Company",
+            "es": "Empresa"
+          }
+        },
+        {
+          "key": "title",
+          "type": "localizedString",
+          "required": false,
+          "maxLength": 150,
+          "localized": true,
+          "nullable": true,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "Job title",
+            "es": "Cargo"
+          }
+        },
+        {
+          "key": "location",
+          "type": "localizedString",
+          "required": false,
+          "maxLength": 150,
+          "localized": true,
+          "nullable": true,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "Location",
+            "es": "Ubicación"
+          }
+        },
+        {
+          "key": "startDate",
+          "type": "dateMonth",
+          "required": false,
+          "maxLength": 7,
+          "localized": false,
+          "nullable": true,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "Start date",
+            "es": "Fecha de inicio"
+          },
+          "pattern": "^\\d{4}-\\d{2}$",
+          "note": {
+            "en": "Use YYYY-MM. Leave null when the month is unknown; put a display value in dateLabel instead (for example year-only dates).",
+            "es": "Use YYYY-MM. Déjelo vacío cuando se desconozca el mes; use dateLabel para el valor visible (por ejemplo, solo el año)."
+          }
+        },
+        {
+          "key": "endDate",
+          "type": "dateMonth",
+          "required": false,
+          "maxLength": 7,
+          "localized": false,
+          "nullable": true,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "End date",
+            "es": "Fecha de finalización"
+          },
+          "pattern": "^\\d{4}-\\d{2}$",
+          "note": {
+            "en": "Leave null when isCurrent is true, or when the end month is unknown.",
+            "es": "Déjelo vacío cuando isCurrent sea verdadero, o cuando se desconozca el mes de finalización."
+          }
+        },
+        {
+          "key": "isCurrent",
+          "type": "boolean",
+          "required": true,
+          "maxLength": null,
+          "localized": false,
+          "nullable": false,
+          "system": false,
+          "ui": "checkbox",
+          "label": {
+            "en": "Current role",
+            "es": "Cargo actual"
+          },
+          "default": false
+        },
+        {
+          "key": "dateLabel",
+          "type": "localizedString",
+          "required": false,
+          "maxLength": 40,
+          "localized": true,
+          "nullable": true,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "Date label",
+            "es": "Etiqueta de fecha"
+          },
+          "note": {
+            "en": "Optional display text when only years are known (for example “2004 and 2002”). Prefer startDate and endDate when the month is known.",
+            "es": "Texto opcional cuando solo se conocen los años (por ejemplo, “2004 y 2002”). Prefiera startDate y endDate cuando se conozca el mes."
+          }
+        },
+        {
+          "key": "highlights",
+          "type": "array",
+          "required": false,
+          "maxLength": null,
+          "localized": false,
+          "nullable": false,
+          "system": false,
+          "ui": "collection",
+          "label": {
+            "en": "Highlights",
+            "es": "Logros"
+          },
+          "itemFields": [
+            {
+              "key": "id",
+              "type": "string",
+              "required": true,
+              "maxLength": 64,
+              "localized": false,
+              "nullable": false,
+              "system": true,
+              "ui": "hidden",
+              "label": {
+                "en": "ID",
+                "es": "ID"
+              },
+              "pattern": "^[a-z0-9-]+$"
+            },
+            {
+              "key": "order",
+              "type": "integer",
+              "required": true,
+              "maxLength": null,
+              "localized": false,
+              "nullable": false,
+              "system": true,
+              "ui": "number",
+              "label": {
+                "en": "Order",
+                "es": "Orden"
+              },
+              "default": 0
+            },
+            {
+              "key": "createdAt",
+              "type": "datetime",
+              "required": true,
+              "maxLength": 40,
+              "localized": false,
+              "nullable": false,
+              "system": true,
+              "ui": "hidden",
+              "label": {
+                "en": "Created at",
+                "es": "Fecha de creación"
+              }
+            },
+            {
+              "key": "updatedAt",
+              "type": "datetime",
+              "required": true,
+              "maxLength": 40,
+              "localized": false,
+              "nullable": false,
+              "system": true,
+              "ui": "hidden",
+              "label": {
+                "en": "Updated at",
+                "es": "Fecha de actualización"
+              }
+            },
+            {
+              "key": "text",
+              "type": "localizedText",
+              "required": true,
+              "maxLength": 600,
+              "localized": true,
+              "nullable": false,
+              "system": false,
+              "ui": "textarea",
+              "label": {
+                "en": "Bullet point",
+                "es": "Viñeta"
+              }
+            }
+          ],
+          "default": []
+        }
+      ]
+    },
+    "education": {
+      "key": "education",
+      "isArray": true,
+      "allowCreate": true,
+      "allowDelete": true,
+      "allowUpdate": true,
+      "label": {
+        "en": "Education",
+        "es": "Educación"
+      },
+      "fields": [
+        {
+          "key": "id",
+          "type": "string",
+          "required": true,
+          "maxLength": 64,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "ID",
+            "es": "ID"
+          },
+          "pattern": "^[a-z0-9-]+$"
+        },
+        {
+          "key": "order",
+          "type": "integer",
+          "required": true,
+          "maxLength": null,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "number",
+          "label": {
+            "en": "Order",
+            "es": "Orden"
+          },
+          "default": 0
+        },
+        {
+          "key": "createdAt",
+          "type": "datetime",
+          "required": true,
+          "maxLength": 40,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "Created at",
+            "es": "Fecha de creación"
+          }
+        },
+        {
+          "key": "updatedAt",
+          "type": "datetime",
+          "required": true,
+          "maxLength": 40,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "Updated at",
+            "es": "Fecha de actualización"
+          }
+        },
+        {
+          "key": "institution",
+          "type": "localizedString",
+          "required": true,
+          "maxLength": 150,
+          "localized": true,
+          "nullable": false,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "Institution",
+            "es": "Institución"
+          }
+        },
+        {
+          "key": "credential",
+          "type": "localizedString",
+          "required": true,
+          "maxLength": 200,
+          "localized": true,
+          "nullable": false,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "Credential",
+            "es": "Título o credencial"
+          }
+        },
+        {
+          "key": "location",
+          "type": "localizedString",
+          "required": false,
+          "maxLength": 150,
+          "localized": true,
+          "nullable": true,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "Location",
+            "es": "Ubicación"
+          }
+        },
+        {
+          "key": "startDate",
+          "type": "dateMonth",
+          "required": false,
+          "maxLength": 7,
+          "localized": false,
+          "nullable": true,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "Start date",
+            "es": "Fecha de inicio"
+          },
+          "pattern": "^\\d{4}-\\d{2}$"
+        },
+        {
+          "key": "endDate",
+          "type": "dateMonth",
+          "required": false,
+          "maxLength": 7,
+          "localized": false,
+          "nullable": true,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "End date",
+            "es": "Fecha de finalización"
+          },
+          "pattern": "^\\d{4}-\\d{2}$"
+        },
+        {
+          "key": "isCurrent",
+          "type": "boolean",
+          "required": true,
+          "maxLength": null,
+          "localized": false,
+          "nullable": false,
+          "system": false,
+          "ui": "checkbox",
+          "label": {
+            "en": "In progress",
+            "es": "En curso"
+          },
+          "default": false
+        },
+        {
+          "key": "dateLabel",
+          "type": "localizedString",
+          "required": false,
+          "maxLength": 40,
+          "localized": true,
+          "nullable": true,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "Date label",
+            "es": "Etiqueta de fecha"
+          }
+        }
+      ]
+    },
+    "skills": {
+      "key": "skills",
+      "isArray": true,
+      "allowCreate": true,
+      "allowDelete": true,
+      "allowUpdate": true,
+      "label": {
+        "en": "Technical skills",
+        "es": "Habilidades técnicas"
+      },
+      "fields": [
+        {
+          "key": "id",
+          "type": "string",
+          "required": true,
+          "maxLength": 64,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "ID",
+            "es": "ID"
+          },
+          "pattern": "^[a-z0-9-]+$"
+        },
+        {
+          "key": "order",
+          "type": "integer",
+          "required": true,
+          "maxLength": null,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "number",
+          "label": {
+            "en": "Order",
+            "es": "Orden"
+          },
+          "default": 0
+        },
+        {
+          "key": "createdAt",
+          "type": "datetime",
+          "required": true,
+          "maxLength": 40,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "Created at",
+            "es": "Fecha de creación"
+          }
+        },
+        {
+          "key": "updatedAt",
+          "type": "datetime",
+          "required": true,
+          "maxLength": 40,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "Updated at",
+            "es": "Fecha de actualización"
+          }
+        },
+        {
+          "key": "category",
+          "type": "localizedString",
+          "required": true,
+          "maxLength": 80,
+          "localized": true,
+          "nullable": false,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "Category",
+            "es": "Categoría"
+          }
+        },
+        {
+          "key": "items",
+          "type": "array",
+          "required": true,
+          "maxLength": null,
+          "localized": false,
+          "nullable": false,
+          "system": false,
+          "ui": "collection",
+          "label": {
+            "en": "Skills",
+            "es": "Habilidades"
+          },
+          "itemFields": [
+            {
+              "key": "id",
+              "type": "string",
+              "required": true,
+              "maxLength": 64,
+              "localized": false,
+              "nullable": false,
+              "system": true,
+              "ui": "hidden",
+              "label": {
+                "en": "ID",
+                "es": "ID"
+              },
+              "pattern": "^[a-z0-9-]+$"
+            },
+            {
+              "key": "order",
+              "type": "integer",
+              "required": true,
+              "maxLength": null,
+              "localized": false,
+              "nullable": false,
+              "system": true,
+              "ui": "number",
+              "label": {
+                "en": "Order",
+                "es": "Orden"
+              },
+              "default": 0
+            },
+            {
+              "key": "createdAt",
+              "type": "datetime",
+              "required": true,
+              "maxLength": 40,
+              "localized": false,
+              "nullable": false,
+              "system": true,
+              "ui": "hidden",
+              "label": {
+                "en": "Created at",
+                "es": "Fecha de creación"
+              }
+            },
+            {
+              "key": "updatedAt",
+              "type": "datetime",
+              "required": true,
+              "maxLength": 40,
+              "localized": false,
+              "nullable": false,
+              "system": true,
+              "ui": "hidden",
+              "label": {
+                "en": "Updated at",
+                "es": "Fecha de actualización"
+              }
+            },
+            {
+              "key": "name",
+              "type": "localizedString",
+              "required": true,
+              "maxLength": 120,
+              "localized": true,
+              "nullable": false,
+              "system": false,
+              "ui": "input",
+              "label": {
+                "en": "Skill",
+                "es": "Habilidad"
+              }
+            }
+          ],
+          "default": []
+        }
+      ]
+    },
+    "languages": {
+      "key": "languages",
+      "isArray": true,
+      "allowCreate": true,
+      "allowDelete": true,
+      "allowUpdate": true,
+      "label": {
+        "en": "Languages",
+        "es": "Idiomas"
+      },
+      "fields": [
+        {
+          "key": "id",
+          "type": "string",
+          "required": true,
+          "maxLength": 64,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "ID",
+            "es": "ID"
+          },
+          "pattern": "^[a-z0-9-]+$"
+        },
+        {
+          "key": "order",
+          "type": "integer",
+          "required": true,
+          "maxLength": null,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "number",
+          "label": {
+            "en": "Order",
+            "es": "Orden"
+          },
+          "default": 0
+        },
+        {
+          "key": "createdAt",
+          "type": "datetime",
+          "required": true,
+          "maxLength": 40,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "Created at",
+            "es": "Fecha de creación"
+          }
+        },
+        {
+          "key": "updatedAt",
+          "type": "datetime",
+          "required": true,
+          "maxLength": 40,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "Updated at",
+            "es": "Fecha de actualización"
+          }
+        },
+        {
+          "key": "name",
+          "type": "localizedString",
+          "required": true,
+          "maxLength": 80,
+          "localized": true,
+          "nullable": false,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "Language",
+            "es": "Idioma"
+          }
+        },
+        {
+          "key": "level",
+          "type": "localizedString",
+          "required": false,
+          "maxLength": 40,
+          "localized": true,
+          "nullable": true,
+          "system": false,
+          "ui": "input",
+          "label": {
+            "en": "Level",
+            "es": "Nivel"
+          }
+        }
+      ]
+    },
+    "additionalInfo": {
+      "key": "additionalInfo",
+      "isArray": true,
+      "allowCreate": true,
+      "allowDelete": true,
+      "allowUpdate": true,
+      "label": {
+        "en": "Additional information",
+        "es": "Información adicional"
+      },
+      "fields": [
+        {
+          "key": "id",
+          "type": "string",
+          "required": true,
+          "maxLength": 64,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "ID",
+            "es": "ID"
+          },
+          "pattern": "^[a-z0-9-]+$"
+        },
+        {
+          "key": "order",
+          "type": "integer",
+          "required": true,
+          "maxLength": null,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "number",
+          "label": {
+            "en": "Order",
+            "es": "Orden"
+          },
+          "default": 0
+        },
+        {
+          "key": "createdAt",
+          "type": "datetime",
+          "required": true,
+          "maxLength": 40,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "Created at",
+            "es": "Fecha de creación"
+          }
+        },
+        {
+          "key": "updatedAt",
+          "type": "datetime",
+          "required": true,
+          "maxLength": 40,
+          "localized": false,
+          "nullable": false,
+          "system": true,
+          "ui": "hidden",
+          "label": {
+            "en": "Updated at",
+            "es": "Fecha de actualización"
+          }
+        },
+        {
+          "key": "text",
+          "type": "localizedText",
+          "required": true,
+          "maxLength": 300,
+          "localized": true,
+          "nullable": false,
+          "system": false,
+          "ui": "textarea",
+          "label": {
+            "en": "Information",
+            "es": "Información"
+          }
+        }
+      ]
+    }
+  },
+  "ui": {
+    "add": {
+      "en": "Add",
+      "es": "Agregar"
+    },
+    "edit": {
+      "en": "Edit",
+      "es": "Editar"
+    },
+    "update": {
+      "en": "Update",
+      "es": "Actualizar"
+    },
+    "delete": {
+      "en": "Delete",
+      "es": "Eliminar"
+    },
+    "confirmDelete": {
+      "en": "Are you sure you want to delete this item? This action cannot be undone.",
+      "es": "¿Está seguro de que desea eliminar este elemento? Esta acción no se puede deshacer."
+    },
+    "search": {
+      "en": "Search",
+      "es": "Buscar"
+    },
+    "save": {
+      "en": "Save",
+      "es": "Guardar"
+    },
+    "cancel": {
+      "en": "Cancel",
+      "es": "Cancelar"
+    },
+    "languageSwitch": {
+      "en": "Switch language",
+      "es": "Cambiar idioma"
+    },
+    "languageNames": {
+      "en": {
+        "label": {
+          "en": "English",
+          "es": "Inglés"
+        }
+      },
+      "es": {
+        "label": {
+          "en": "Spanish",
+          "es": "Español"
+        }
+      }
+    }
+  }
+}
