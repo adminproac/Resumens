@@ -26,36 +26,39 @@ export function writeLanguage(lang) {
   }
 }
 
-export function readStored() {
-  const original = seedData();
+export function readCache() {
   try {
     const raw = localStorage.getItem(DATA_KEY);
-    if (!raw) return { data: original, customized: false, seedMismatch: false };
+    if (!raw) return null;
     const parsed = JSON.parse(raw);
-    if (!parsed || !isResumeDocument(parsed.data)) {
-      return { data: original, customized: false, seedMismatch: false };
-    }
+    if (!parsed || !isResumeDocument(parsed.data)) return null;
     return {
       data: parsed.data,
-      customized: true,
-      seedMismatch: parsed.seedLastUpdated !== original.meta?.lastUpdated,
+      sha: typeof parsed.sha === 'string' ? parsed.sha : null,
+      synced: Boolean(parsed.synced),
+      savedAt: parsed.savedAt || null,
     };
   } catch {
-    return { data: original, customized: false, seedMismatch: false };
+    return null;
   }
 }
 
-export function writeStored(data) {
+export function writeCache(data, sha, synced) {
   const payload = {
-    seedLastUpdated: seedData().meta?.lastUpdated || null,
     savedAt: new Date().toISOString(),
+    sha: sha || null,
+    synced: Boolean(synced),
     data,
   };
   localStorage.setItem(DATA_KEY, JSON.stringify(payload));
 }
 
-export function clearStored() {
-  localStorage.removeItem(DATA_KEY);
+export function clearCache() {
+  try {
+    localStorage.removeItem(DATA_KEY);
+  } catch {
+    /* ignore */
+  }
 }
 
 export function downloadJson(data) {

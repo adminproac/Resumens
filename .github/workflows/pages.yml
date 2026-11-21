@@ -11,6 +11,8 @@ permissions:
   id-token: write
   actions: read
 
+# Every push to main, including cv-data.json saves from the browser, deploys.
+# A newer push cancels the in-progress run so repeated résumé edits do not pile up.
 concurrency:
   group: pages
   cancel-in-progress: true

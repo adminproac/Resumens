@@ -259,23 +259,23 @@ export function FieldList({ fields, draft, onChange, errors, path = '', lang, ui
   );
 }
 
-export function RecordForm({ fields, draft, errors, lang, ui, onChange, onSubmit, onCancel, submitLabel, cancelLabel }) {
+export function RecordForm({ fields, draft, errors, lang, ui, onChange, onSubmit, onCancel, submitLabel, cancelLabel, disabled }) {
   return (
     <form
       className="record-form"
       noValidate
       onSubmit={(event) => {
         event.preventDefault();
-        onSubmit();
+        if (!disabled) onSubmit();
       }}
     >
       <FieldList fields={fields} draft={draft} onChange={onChange} errors={errors} lang={lang} ui={ui} />
       <div className="form-actions">
-        <button type="submit" className="btn">
+        <button type="submit" className="btn" disabled={disabled}>
           {submitLabel}
         </button>
         {onCancel ? (
-          <button type="button" className="btn ghost" onClick={onCancel}>
+          <button type="button" className="btn ghost" onClick={onCancel} disabled={disabled}>
             {cancelLabel}
           </button>
         ) : null}

@@ -321,3 +321,33 @@ export function isResumeDocument(value) {
 export function cloneData(data) {
   return structuredClone(data);
 }
+
+export function updatedAtMs(data) {
+  const value = Date.parse(data?.meta?.lastUpdated || '');
+  return Number.isNaN(value) ? 0 : value;
+}
+
+/** True when two résumé documents match aside from meta.lastUpdated. */
+export function documentsMatch(left, right) {
+  if (!isResumeDocument(left) || !isResumeDocument(right)) return false;
+  const strip = (data) => {
+    const copy = cloneData(data);
+    copy.meta = { ...copy.meta, lastUpdated: '' };
+    return JSON.stringify(copy);
+  };
+  return strip(left) === strip(right);
+}
+
+/**
+ * The repository copy wins whenever it is as new as the browser copy.
+ * A local document is kept only when its lastUpdated is strictly newer.
+ */
+export function chooseDocument(remote, local) {
+  const remoteOk = isResumeDocument(remote);
+  const localOk = isResumeDocument(local);
+  if (!remoteOk && !localOk) return { data: null, source: 'none' };
+  if (!remoteOk) return { data: local, source: 'cache' };
+  if (!localOk) return { data: remote, source: 'repo' };
+  if (updatedAtMs(local) > updatedAtMs(remote)) return { data: local, source: 'cache-newer' };
+  return { data: remote, source: 'repo' };
+}

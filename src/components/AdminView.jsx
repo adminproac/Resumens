@@ -19,7 +19,7 @@ import { ConfirmDialog } from './ConfirmDialog.jsx';
 import { RecordForm } from './RecordForm.jsx';
 
 export function AdminView() {
-  const { data, lang, commit, notify, revision } = useResume();
+  const { data, lang, commit, revision, saving, connected } = useResume();
   const sections = sectionList(data.schema);
   const [sectionKey, setSectionKey] = useState(sections[0]?.key || 'profile');
   const [query, setQuery] = useState('');
@@ -90,6 +90,10 @@ export function AdminView() {
       ? records.find((record) => record.id === draft.id) || null
       : data[section.key];
     const normalized = fromFormValue(section.fields, draft, mode === 'create' ? null : previous);
+    const heading = truncate(recordHeading(section.fields, normalized, 'en'), 72);
+    const verb = mode === 'create' ? 'Add' : 'Update';
+    const label = localized(section.label, 'en');
+    const message = heading ? `${verb} résumé ${label}: ${heading}` : `${verb} résumé ${label}`;
     commit((current) => {
       if (section.isArray) {
         const list = Array.isArray(current[section.key]) ? current[section.key] : [];
@@ -101,27 +105,30 @@ export function AdminView() {
         current[section.key] = normalized;
       }
       return current;
+    }, message).finally(() => {
+      if (section.isArray) closeForm();
     });
-    notify(localized(chrome.saved, lang));
-    if (section.isArray) closeForm();
   }
 
   function confirmDelete() {
     if (!pendingDelete) return;
     const id = pendingDelete.id;
+    const heading = truncate(recordHeading(section.fields, pendingDelete, 'en'), 72);
+    const label = localized(section.label, 'en');
     commit((current) => {
       current[section.key] = (current[section.key] || []).filter((record) => record.id !== id);
       return current;
-    });
+    }, heading ? `Delete résumé ${label}: ${heading}` : `Delete résumé ${label}`);
     if (draft?.id === id) closeForm();
     setPendingDelete(null);
   }
 
   function move(id, direction) {
+    const label = localized(section.label, 'en');
     commit((current) => {
       current[section.key] = moveRecord(current[section.key] || [], id, direction);
       return current;
-    });
+    }, `Reorder résumé ${label}`);
   }
 
   const ui = data.ui;
@@ -151,7 +158,7 @@ export function AdminView() {
         <header className="admin-head">
           <div>
             <h2>{localized(section.label, lang)}</h2>
-            <p className="muted">{localized(chrome.savedLocal, lang)}</p>
+            <p className="muted">{localized(connected ? chrome.savedRemote : chrome.savedLocal, lang)}</p>
           </div>
           {section.isArray && section.allowCreate ? (
             <button type="button" className="btn" onClick={openCreate}>
@@ -194,8 +201,9 @@ export function AdminView() {
               onChange={setDraft}
               onSubmit={save}
               onCancel={section.isArray ? closeForm : null}
-              submitLabel={mode === 'create' ? localized(ui.save, lang) : localized(ui.update, lang)}
+              submitLabel={saving ? localized(chrome.saving, lang) : mode === 'create' ? localized(ui.save, lang) : localized(ui.update, lang)}
               cancelLabel={localized(ui.cancel, lang)}
+              disabled={saving}
             />
           </section>
         ) : null}
@@ -222,8 +230,8 @@ export function AdminView() {
                       type="button"
                       className="btn tiny ghost"
                       aria-label={localized(chrome.moveUp, lang)}
-                      disabled={globalIndex <= 0}
-                      onClick={() => move(record.id, -1)}
+                  disabled={saving || globalIndex <= 0}
+                  onClick={() => move(record.id, -1)}
                     >
                       ↑
                     </button>
@@ -231,18 +239,18 @@ export function AdminView() {
                       type="button"
                       className="btn tiny ghost"
                       aria-label={localized(chrome.moveDown, lang)}
-                      disabled={globalIndex < 0 || globalIndex >= records.length - 1}
-                      onClick={() => move(record.id, 1)}
+                  disabled={saving || globalIndex < 0 || globalIndex >= records.length - 1}
+                  onClick={() => move(record.id, 1)}
                     >
                       ↓
                     </button>
                     {section.allowUpdate ? (
-                      <button type="button" className="btn tiny" onClick={() => openEdit(record)}>
+                      <button type="button" className="btn tiny" onClick={() => openEdit(record)} disabled={saving}>
                         {localized(ui.edit, lang)}
                       </button>
                     ) : null}
                     {section.allowDelete ? (
-                      <button type="button" className="btn tiny danger" onClick={() => setPendingDelete(record)}>
+                      <button type="button" className="btn tiny danger" onClick={() => setPendingDelete(record)} disabled={saving}>
                         {localized(ui.delete, lang)}
                       </button>
                     ) : null}

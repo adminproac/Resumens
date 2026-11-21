@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { AdminView } from './components/AdminView.jsx';
 import { ConfirmDialog } from './components/ConfirmDialog.jsx';
+import { GithubConnect } from './components/GithubConnect.jsx';
 import { ResumeContents, ResumeView } from './components/ResumeView.jsx';
 import { useResume } from './context/ResumeContext.jsx';
 import { chrome } from './lib/chrome.js';
@@ -16,7 +17,8 @@ export function App() {
     data,
     lang,
     setLang,
-    customized,
+    unsynced,
+    offline,
     seedMismatch,
     dismissSeedMismatch,
     notice,
@@ -75,7 +77,7 @@ export function App() {
       <header className="topbar">
         <button type="button" className="brand" onClick={() => navigate('read')}>
           <span className="mark" aria-hidden="true">
-            ED
+            MR
           </span>
           <span>{data.profile?.fullName}</span>
         </button>
@@ -112,9 +114,15 @@ export function App() {
               {localized(ui.edit, lang)}
             </button>
           )}
-          {customized ? <span className="pill">{localized(chrome.localChanges, lang)}</span> : null}
+          {unsynced ? <span className="pill">{localized(chrome.localChanges, lang)}</span> : null}
         </div>
       </header>
+
+      {offline && view === 'edit' ? (
+        <div className="banner" role="status">
+          <p>{localized(chrome.offline, lang)}</p>
+        </div>
+      ) : null}
 
       {seedMismatch && view === 'edit' ? (
         <div className="banner" role="status">
@@ -126,7 +134,7 @@ export function App() {
       ) : null}
 
       {notice ? (
-        <p className="toast" role="status">
+        <p className={notice.tone === 'err' ? 'toast error' : 'toast'} role={notice.tone === 'err' ? 'alert' : 'status'}>
           {notice.text}
         </p>
       ) : null}
@@ -141,7 +149,10 @@ export function App() {
 
       <main id="contenido">
         {view === 'edit' ? (
-          <AdminView />
+          <>
+            <GithubConnect />
+            <AdminView />
+          </>
         ) : (
           <div className="read-layout">
             <div className="read-tools">
