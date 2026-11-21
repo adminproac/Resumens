@@ -49,8 +49,8 @@ El perfil es un solo registro: el esquema permite actualizarlo y no crear ni bor
 2. Cree un token fino en [https://github.com/settings/personal-access-tokens/new](https://github.com/settings/personal-access-tokens/new).
 3. En acceso al repositorio, elija solo `adminproac/Resumens`.
 4. En permisos del repositorio, ponga **Contents** en **Read and write**. El resto puede quedar sin acceso.
-5. Genere el token, péguelo en el campo y confirme. Se guarda solo en este navegador.
-6. A partir de ahí, **Guardar**, **Actualizar**, **Eliminar** y reordenar actualizan `cv-data.json` en `main`.
+5. Genere el token, péguelo en el campo y pulse **Probar conexión**. Debe decir que puede escribir y mostrar su usuario de GitHub. Si no puede, el aviso incluye el código HTTP y el mensaje exacto de GitHub; el token no se guarda.
+6. Pulse **Conectar con GitHub**. La barra queda en **Conectado como** su usuario. A partir de ahí, **Guardar**, **Actualizar**, **Eliminar**, reordenar e **Importar JSON** crean un commit en `main`. El enlace **Último commit exitoso** abre ese commit. Si hay cambios solo en el navegador, use **Publicar en GitHub**.
 
 El token puede editar archivos de ese repositorio; la aplicación solo escribe `cv-data.json`. No lo comparta ni lo suba a Git. Cuando no lo necesite, use **Desconectar** o revoque el token en GitHub. Cada navegador o dispositivo hay que conectarlo aparte.
 

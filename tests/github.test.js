@@ -78,8 +78,8 @@ test('commit sends the full document and retries once after a sha conflict', asy
 
   const edited = cloneData(seed);
   edited.profile.fullName = 'MYRIMA ROCIO DUARTE';
-  const sha = await commitDocument('test-token', edited, 'Update résumé Profile: MYRIMA ROCIO DUARTE', 'stale-sha', fetchImpl);
-  assert.equal(sha, 'blob-after-retry');
+  const result = await commitDocument('test-token', edited, 'Update résumé Profile: MYRIMA ROCIO DUARTE', 'stale-sha', fetchImpl);
+  assert.equal(result.sha, 'blob-after-retry');
   const puts = calls.filter((call) => call.method === 'PUT');
   assert.equal(puts.length, 2);
   assert.equal(puts[0].body.sha, 'stale-sha');
@@ -103,13 +103,65 @@ test('a second sha conflict is reported and not retried forever', async () => {
   };
   await assert.rejects(
     () => commitDocument('test-token', seed, 'Update résumé', 'old', fetchImpl),
-    (error) => error.code === 'conflict' && puts === 2,
+    (error) => error.code === 'conflict' && error.status === 409 && error.detail.includes('sha mismatch') && puts === 2,
   );
 });
 
-test('verifyToken requires contents write', async () => {
+test('a contents=read token is refused with that detail', async () => {
   const fetchImpl = async () => jsonResponse(200, { permissions: { contents: 'read' } });
-  await assert.rejects(() => verifyToken('test-token', fetchImpl), (error) => error.code === 'noWrite');
-  const allowed = async () => jsonResponse(200, { permissions: { contents: 'write' } });
-  assert.equal(await verifyToken('test-token', allowed), true);
+  await assert.rejects(
+    () => verifyToken('test-token', fetchImpl),
+    (error) => error.code === 'noWrite' && error.detail === 'contents=read',
+  );
+});
+
+test('an owner fine-grained token is accepted from push/admin and a save commits', async () => {
+  const calls = [];
+  const fetchImpl = async (url, options = {}) => {
+    const method = options.method || 'GET';
+    calls.push({ url, method });
+    if (url.endsWith('/user')) return jsonResponse(200, { login: 'adminproac' });
+    if (url.includes('/contents/')) {
+      if (method === 'PUT') {
+        return jsonResponse(200, {
+          content: { sha: 'blob-new' },
+          commit: { sha: 'abc1234', html_url: 'https://github.com/adminproac/Resumens/commit/abc1234' },
+        });
+      }
+      return jsonResponse(200, { sha: 'old-blob', content: encodeContent(JSON.stringify(seed)) });
+    }
+    return jsonResponse(200, { permissions: { admin: true, maintain: true, push: true, triage: true, pull: true } });
+  };
+
+  const { probeConnection, commitDocument: commitFile } = await import('../src/lib/github.js');
+  const probe = await probeConnection('github_pat_example', fetchImpl);
+  assert.equal(probe.login, 'adminproac');
+  assert.equal(probe.access.canWrite, true);
+  assert.equal(probe.access.reason, 'repo-role');
+
+  const edited = structuredClone(seed);
+  edited.profile.fullName = 'MYRIMA ROCIO DUARTE CACERES';
+  const saved = await commitFile('github_pat_example', edited, 'Import résumé JSON', probe.sha, fetchImpl);
+  assert.equal(saved.commitUrl, 'https://github.com/adminproac/Resumens/commit/abc1234');
+  assert.ok(calls.some((call) => call.method === 'PUT'));
+});
+
+test('a write failure keeps the HTTP status and GitHub message', async () => {
+  const fetchImpl = async (url, options = {}) => {
+    if ((options.method || 'GET') === 'PUT') {
+      return jsonResponse(403, { message: 'Resource not accessible by personal access token' });
+    }
+    return jsonResponse(200, { sha: 'old', content: encodeContent(JSON.stringify(seed)) });
+  };
+  await assert.rejects(
+    () => commitDocument('test-token', seed, 'Import résumé JSON', 'old', fetchImpl),
+    (error) => error.status === 403 && error.detail.includes('Resource not accessible by personal access token'),
+  );
+});
+
+test('unpublished local data is still published when the file matches the screen', async () => {
+  const { shouldPublish } = await import('../src/lib/model.js');
+  assert.equal(shouldPublish(true, { unsynced: true }), true);
+  assert.equal(shouldPublish(true, {}), false);
+  assert.equal(shouldPublish(false, {}), true);
 });

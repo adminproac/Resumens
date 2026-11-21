@@ -74,6 +74,11 @@ export const chrome = {
   },
   tokenLink: { en: 'Create a token on GitHub', es: 'Crear un token en GitHub' },
   connectOk: { en: 'GitHub is connected in this browser.', es: 'GitHub quedó conectado en este navegador.' },
+  connectedAs: { en: 'Connected as', es: 'Conectado como' },
+  notConnectedLabel: { en: 'Not connected', es: 'No conectado' },
+  lastCommit: { en: 'Last successful commit', es: 'Último commit exitoso' },
+  testConnection: { en: 'Test connection', es: 'Probar conexión' },
+  probeOk: { en: 'This token can write to adminproac/Resumens.', es: 'Este token puede escribir en adminproac/Resumens.' },
   disconnectOk: {
     en: 'Disconnected. The token was removed from this browser.',
     es: 'Desconectado. El token se quitó de este navegador.',

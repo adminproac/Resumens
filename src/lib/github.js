@@ -8,13 +8,23 @@ export const TOKEN_KEY = 'resumens.githubToken';
 
 const API = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}`;
 
+export const LOGIN_KEY = 'resumens.githubLogin';
+export const COMMIT_KEY = 'resumens.githubCommit';
+
 export class GitHubError extends Error {
-  constructor(code, status) {
-    super(code);
+  constructor(code, status, detail) {
+    super(detail ? `${code}: ${detail}` : code);
     this.name = 'GitHubError';
     this.code = code;
     this.status = status || 0;
+    this.detail = detail || '';
   }
+}
+
+export function explainFailure(error) {
+  const status = error?.status ? `HTTP ${error.status}` : '';
+  const detail = error?.detail || '';
+  return [status, detail].filter(Boolean).join(' — ');
 }
 
 export function encodeContent(text) {
@@ -51,8 +61,45 @@ export function writeToken(token) {
 export function clearToken() {
   try {
     localStorage.removeItem(TOKEN_KEY);
+    localStorage.removeItem(LOGIN_KEY);
   } catch {
     /* ignore */
+  }
+}
+
+export function readLogin() {
+  try {
+    return localStorage.getItem(LOGIN_KEY) || '';
+  } catch {
+    return '';
+  }
+}
+
+export function writeLogin(login) {
+  try {
+    localStorage.setItem(LOGIN_KEY, login || '');
+  } catch {
+    /* ignore quota */
+  }
+}
+
+export function readLastCommit() {
+  try {
+    const raw = localStorage.getItem(COMMIT_KEY);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    if (!parsed || (!parsed.url && !parsed.sha)) return null;
+    return parsed;
+  } catch {
+    return null;
+  }
+}
+
+export function writeLastCommit(record) {
+  try {
+    localStorage.setItem(COMMIT_KEY, JSON.stringify(record));
+  } catch {
+    /* ignore quota */
   }
 }
 
@@ -84,9 +131,52 @@ function statusCode(status) {
 async function request(url, options, fetchImpl) {
   try {
     return await fetchImpl(url, { cache: 'no-store', ...options });
-  } catch {
-    throw new GitHubError('network');
+  } catch (error) {
+    const detail = error instanceof Error ? error.message : '';
+    throw new GitHubError('network', 0, detail);
   }
+}
+
+async function readDetail(response) {
+  try {
+    const body = await response.json();
+    if (typeof body === 'string') return body.slice(0, 400);
+    const message = body?.message || '';
+    const extra = Array.isArray(body?.errors)
+      ? body.errors.map((item) => item?.message || item?.code || '').filter(Boolean).join('; ')
+      : '';
+    return [message, extra].filter(Boolean).join(' — ').slice(0, 400);
+  } catch {
+    return '';
+  }
+}
+
+function fail(response, detail) {
+  throw new GitHubError(statusCode(response.status), response.status, detail);
+}
+
+/**
+ * Fine-grained tokens do not put Contents on GET /repos. That response lists the
+ * user's role (push/admin). contents=read is an explicit refusal.
+ */
+export function interpretPermissions(permissions) {
+  const value = permissions && typeof permissions === 'object' ? permissions : {};
+  const contents = value.contents;
+  if (contents === 'write' || contents === 'admin') {
+    return { canWrite: true, reason: 'contents-write', summary: `contents=${contents}` };
+  }
+  if (contents === 'read') {
+    return { canWrite: false, reason: 'contents-read', summary: 'contents=read' };
+  }
+  if (value.admin === true || value.push === true || value.maintain === true) {
+    return {
+      canWrite: true,
+      reason: 'repo-role',
+      summary: `push=${Boolean(value.push)} admin=${Boolean(value.admin)} maintain=${Boolean(value.maintain)}`,
+    };
+  }
+  const listed = Object.entries(value).map(([key, item]) => `${key}=${item}`).join(', ');
+  return { canWrite: false, reason: 'no-write', summary: listed || 'permissions empty' };
 }
 
 function parseDocument(text) {
@@ -102,7 +192,7 @@ function parseDocument(text) {
 
 export async function fetchRawDocument(fetchImpl = fetch) {
   const response = await request(rawDocumentUrl(), { headers: { Accept: 'application/json' } }, fetchImpl);
-  if (!response.ok) throw new GitHubError(statusCode(response.status), response.status);
+  if (!response.ok) fail(response, await readDetail(response));
   const data = parseDocument(await response.text());
   return { data, sha: null };
 }
@@ -113,23 +203,45 @@ export async function fetchContents(token, fetchImpl = fetch) {
     { headers: apiHeaders(token) },
     fetchImpl,
   );
-  if (!response.ok) throw new GitHubError(statusCode(response.status), response.status);
+  if (!response.ok) fail(response, await readDetail(response));
   const payload = await response.json();
   const data = parseDocument(decodeContent(payload.content || ''));
-  if (!payload.sha) throw new GitHubError('invalid');
+  if (!payload.sha) throw new GitHubError('invalid', response.status, 'missing sha');
   return { data, sha: payload.sha };
 }
 
 export async function verifyToken(token, fetchImpl = fetch) {
   const response = await request(`${API}`, { headers: apiHeaders(token) }, fetchImpl);
-  if (!response.ok) throw new GitHubError(statusCode(response.status), response.status);
+  if (!response.ok) fail(response, await readDetail(response));
   const repo = await response.json();
-  const contents = repo?.permissions?.contents;
-  if (contents !== 'write' && contents !== 'admin') throw new GitHubError('noWrite', response.status);
-  return true;
+  const access = interpretPermissions(repo?.permissions);
+  if (!access.canWrite) throw new GitHubError('noWrite', response.status, access.summary);
+  return access;
 }
 
-export async function putDocument(token, data, message, sha, fetchImpl = fetch) {
+export async function probeConnection(token, fetchImpl = fetch) {
+  const userResponse = await request('https://api.github.com/user', { headers: apiHeaders(token) }, fetchImpl);
+  let login = '';
+  if (userResponse.ok) {
+    const user = await userResponse.json();
+    login = user?.login || '';
+  } else if (userResponse.status === 401) {
+    fail(userResponse, await readDetail(userResponse));
+  } else {
+    await readDetail(userResponse);
+  }
+
+  const repoResponse = await request(`${API}`, { headers: apiHeaders(token) }, fetchImpl);
+  if (!repoResponse.ok) fail(repoResponse, await readDetail(repoResponse));
+  const repo = await repoResponse.json();
+  const access = interpretPermissions(repo?.permissions);
+  if (!access.canWrite) throw new GitHubError('noWrite', repoResponse.status, access.summary);
+
+  const file = await fetchContents(token, fetchImpl);
+  return { login, access, sha: file.sha, data: file.data };
+}
+
+export async function putDocument(token, data, message, expectedSha, fetchImpl = fetch) {
   const response = await request(
     contentsUrl(),
     {
@@ -138,18 +250,20 @@ export async function putDocument(token, data, message, sha, fetchImpl = fetch) 
       body: JSON.stringify({
         message,
         content: encodeContent(`${JSON.stringify(data, null, 2)}\n`),
-        sha,
+        sha: expectedSha,
         branch: GITHUB_BRANCH,
       }),
     },
     fetchImpl,
   );
-  if (response.status === 409 || response.status === 422) throw new GitHubError('conflict', response.status);
-  if (!response.ok) throw new GitHubError(statusCode(response.status), response.status);
+  if (!response.ok) fail(response, await readDetail(response));
   const payload = await response.json();
-  const nextSha = payload?.content?.sha;
-  if (!nextSha) throw new GitHubError('invalid');
-  return nextSha;
+  const blobSha = payload?.content?.sha;
+  if (!blobSha) throw new GitHubError('invalid', response.status, 'missing content sha');
+  const commitSha = payload?.commit?.sha || '';
+  const commitUrl = payload?.commit?.html_url
+    || (commitSha ? `https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/commit/${commitSha}` : '');
+  return { sha: blobSha, commitSha, commitUrl };
 }
 
 export async function commitDocument(token, data, message, knownSha, fetchImpl = fetch) {

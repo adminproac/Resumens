@@ -19,12 +19,16 @@ export function App() {
     setLang,
     unsynced,
     offline,
+    connected,
+    saving,
     seedMismatch,
     dismissSeedMismatch,
     notice,
+    dismissNotice,
     notify,
     replaceData,
     resetData,
+    publish,
   } = useResume();
   const [view, setView] = useState(viewFromLocation);
   const [query, setQuery] = useState('');
@@ -54,11 +58,12 @@ export function App() {
     event.target.value = '';
     if (!file) return;
     const reader = new FileReader();
-    reader.onload = () => {
+    reader.onload = async () => {
       try {
-        replaceData(JSON.parse(String(reader.result || '')));
-      } catch {
-        notify(localized(chrome.importError, lang));
+        await replaceData(JSON.parse(String(reader.result || '')));
+      } catch (error) {
+        const extra = error instanceof Error && error.message ? ` — ${error.message}` : '';
+        notify(`${localized(chrome.importError, lang)}${extra}`, 'err');
       }
     };
     reader.readAsText(file);
@@ -127,15 +132,25 @@ export function App() {
       {seedMismatch && view === 'edit' ? (
         <div className="banner" role="status">
           <p>{localized(chrome.seedMismatch, lang)}</p>
-          <button type="button" className="btn tiny ghost" onClick={dismissSeedMismatch}>
-            {localized(chrome.dismiss, lang)}
-          </button>
+          <div className="row-actions">
+            {connected ? (
+              <button type="button" className="btn tiny" onClick={publish} disabled={saving}>
+                {saving ? localized(chrome.saving, lang) : localized(chrome.publish, lang)}
+              </button>
+            ) : null}
+            <button type="button" className="btn tiny ghost" onClick={dismissSeedMismatch}>
+              {localized(chrome.dismiss, lang)}
+            </button>
+          </div>
         </div>
       ) : null}
 
       {notice ? (
         <p className={notice.tone === 'err' ? 'toast error' : 'toast'} role={notice.tone === 'err' ? 'alert' : 'status'}>
-          {notice.text}
+          {notice.text}{' '}
+          <button type="button" className="btn tiny ghost" onClick={dismissNotice}>
+            {localized(chrome.dismiss, lang)}
+          </button>
         </p>
       ) : null}
 

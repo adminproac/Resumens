@@ -342,6 +342,11 @@ export function documentsMatch(left, right) {
  * The repository copy wins whenever it is as new as the browser copy.
  * A local document is kept only when its lastUpdated is strictly newer.
  */
+export function shouldPublish(sameDocument, { force = false, unsynced = false } = {}) {
+  if (force || unsynced) return true;
+  return !sameDocument;
+}
+
 export function chooseDocument(remote, local) {
   const remoteOk = isResumeDocument(remote);
   const localOk = isResumeDocument(local);
